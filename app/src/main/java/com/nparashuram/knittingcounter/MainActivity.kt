@@ -21,18 +21,24 @@ import androidx.compose.foundation.Image
 import androidx.compose.animation.core.animateDpAsState
 import kotlinx.coroutines.delay
 import androidx.compose.ui.platform.LocalDensity
+import androidx.lifecycle.lifecycleScope
+import com.nparashuram.knittingcounter.data.CounterPreferences
+import kotlinx.coroutines.launch
 
 class MainActivity : ComponentActivity() {
+    private lateinit var counterPreferences: CounterPreferences
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // enableEdgeToEdge()
+        counterPreferences = CounterPreferences(applicationContext)
+        enableEdgeToEdge()
         setContent {
             CounterTheme {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = Color.Transparent
                 ) {
-                    CounterScreen()
+                    CounterScreen(counterPreferences)
                 }
             }
         }
@@ -40,7 +46,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun CounterScreen() {
+fun CounterScreen(counterPreferences: CounterPreferences) {
     var count by remember { mutableStateOf(0) }
     var isPressed by remember { mutableStateOf(false) }
     var buttonClicked by remember { mutableStateOf(false) }
@@ -48,6 +54,22 @@ fun CounterScreen() {
     val animatedHeight by animateDpAsState(targetValue = buttonHeight, label = "buttonHeight")
     val digitBoxSize = 80.dp
     val digitBoxSizePx = with(LocalDensity.current) { digitBoxSize.toPx() }
+    val scope = rememberCoroutineScope()
+
+    // Collect the saved counter value
+    val savedCount by counterPreferences.counterValue.collectAsState(initial = 0)
+    
+    // Update local count when saved value changes
+    LaunchedEffect(savedCount) {
+        count = savedCount
+    }
+
+    // Save count when it changes
+    LaunchedEffect(count) {
+        scope.launch {
+            counterPreferences.updateCounter(count)
+        }
+    }
 
     LaunchedEffect(buttonClicked) {
         if (buttonClicked) {
