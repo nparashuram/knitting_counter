@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.nparashuram.knittingcounter"
+    namespace = "com.nparashuram.app.knitcounter"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.nparashuram.knittingcounter"
+        applicationId = "com.nparashuram.app.knitcounter"
         minSdk = 24
         targetSdk = 34
         versionCode = 2

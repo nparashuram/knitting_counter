@@ -1,4 +1,4 @@
-package com.nparashuram.knittingcounter.ui.theme
+package com.nparashuram.app.knitcounter.ui.theme
 
 import android.app.Activity
 import android.os.Build
@@ -55,4 +55,4 @@ fun CounterTheme(
         typography = Typography,
         content = content
     )
-}
+} 
