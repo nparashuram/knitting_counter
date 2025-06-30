@@ -1,6 +1,5 @@
-package com.nparashuram.app.knitcounter.ui.theme
+package com.nparashuram.simple_apps.kniting_row_counter.ui.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme

@@ -1,4 +1,4 @@
-package com.nparashuram.app.knitcounter
+package com.nparashuram.simple_apps.kniting_row_counter
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

@@ -1,4 +1,4 @@
-package com.nparashuram.app.knitcounter.data
+package com.nparashuram.simple_apps.kniting_row_counter.data
 
 import android.content.Context
 import androidx.datastore.core.DataStore

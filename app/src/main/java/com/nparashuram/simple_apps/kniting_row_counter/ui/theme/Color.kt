@@ -1,4 +1,4 @@
-package com.nparashuram.app.knitcounter.ui.theme
+package com.nparashuram.simple_apps.kniting_row_counter.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
