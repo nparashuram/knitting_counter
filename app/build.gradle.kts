@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.nparashuram.app.knitcounter"
+    namespace = "com.nparashuram.simple_apps.kniting_row_counter"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.nparashuram.app.knitcounter"
+        applicationId = "com.nparashuram.simple_apps.kniting_row_counter"
         minSdk = 24
         targetSdk = 34
         versionCode = 2
@@ -49,7 +49,7 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
-    implementation("androidx.datastore:datastore-preferences:1.0.0")
+    implementation(libs.androidx.datastore.preferences)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
