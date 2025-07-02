@@ -15,7 +15,7 @@
     }
     h1 { font-size: 2em; margin-bottom: 0.5em; }
     h2 { font-size: 1.5em; margin-top: 1.5em; }
-    p { line-height: 1.6; }
+    p, li { line-height: 1.6; }
     .feature {
       background: #fff;
       border-left: 4px solid #cc3366;
@@ -24,7 +24,7 @@
       border-radius: 6px;
     }
     .emoji {
-      font-size: 3em;
+      font-size: 2em;
       margin-right: 0.5em;
       vertical-align: middle;
     }
@@ -50,57 +50,67 @@
 
   <h1>🧶 VR Knitting Row Counter</h1>
 
-  <p><strong>What is a knitting row counter?</strong> It’s a simple tool—physical or digital—that helps you keep track of how many rows you’ve knitted. From scarves and sweaters to intricate lace patterns, knowing your row count is essential to maintain consistency, avoid mistakes, and know exactly where you are in your project.</p>
+  <p><strong>What is a knitting row counter?</strong> It helps knitters keep track of rows or stitches in a project—crucial for accurate pattern repetition, consistency in gauge, and avoiding counting errors, especially in complex projects like lace or cables.</p>
 
-  <p><strong>Why put it in VR?</strong> With the counter running inside your Quest headset, you can keep knitting while:</p>
+  <p><strong>Why put it in VR?</strong> With the counter inside your Quest headset, you get:</p>
   <ul>
-    <li>🎬 Binge-watching your favorite series</li>
-    <li>🎧 Listening to podcasts or music</li>
-    <li>📺 Following VR tutorials without taking off your headset</li>
-    <li>🏝️ Relaxing in VR environments—no pausing, no interruptions</li>
+    <li>🎬 Seamless entertainment—knit while watching immersive VR shows.</li>
+    <li>🎧 Hands-free tutorials and podcasts—keep counting without disrupting flow.</li>
+    <li>👋 No need to remove the headset—count, adjust, and reset entirely within VR.</li>
   </ul>
 
-  <h2>✨ Features</h2>
+  <h2>✨ Features (Extended)</h2>
 
   <div class="feature">
     <span class="emoji">👆</span>
-    <strong>Big Tap to Count:</strong> One large button to increment row count swiftly—keeping your flow uninterrupted.
+    <strong>Big Tap to Count</strong><br>
+    Buffer your knitting flow with ease: this button takes up most of the viewport, letting you tap with hand-tracking or controller without fuss. You won’t have to look away or aim precisely—just tap and continue.
   </div>
 
   <div class="feature">
     <span class="emoji">➕➖</span>
-    <strong>Adjust As Needed:</strong> "+" or "−" buttons let you correct missed rows or backtrack easily.
+    <strong>Adjust As Needed</strong><br>
+    Minor miscounts? Quickly fix them. These buttons let you fine-tune your count up or down without resetting everything, so small errors won't derail your project progress.
   </div>
 
   <div class="feature">
     <span class="emoji">🔄</span>
-    <strong>Quick Reset:</strong> Reset the counter to zero in one tap—perfect when starting a new pattern.
+    <strong>Quick Reset</strong><br>
+    Starting something new? Tap reset and you’re back at zero instantly. Ideal for swatches, sampling repeats, or JIT (just-in-time) knitting sessions between projects.
   </div>
 
   <div class="feature">
     <span class="emoji">💾</span>
-    <strong>Saves Automatically:</strong> Your current row count is stored locally—surviving app closures or headset restarts.
+    <strong>Saves Automatically</strong><br>
+    Never lose your count—app stores the number locally on your headset. Close, reopen, take a break—the app will pick up where you left off, so your stitch flow stays intact.
   </div>
 
   <div class="feature">
     <span class="emoji">🚫🌐</span>
-    <strong>No Ads. No Accounts. No Internet Needed.</strong> A distraction-free, privacy-respecting tool—no cloud required.
+    <strong>No Ads. No Accounts. No Internet Needed.</strong><br>
+    Stay focused: zero ads to break your immersion, no sign‑ins or tracking, and no connectivity hassles. Works seamlessly offline—ideal for privacy-minded knitters and VR purists.
   </div>
 
   <h2>🎨 Look & Feel</h2>
-  <p>The UI is clean and minimal—think typical row counters but optimized for VR clarity. Large buttons and clear text ensure visibility in your VR display, and soft color contrasts make it easy on the eyes during long knitting sessions.</p>
+  <p>Clean, minimal, and VR-ready. Large fonts and buttons ensure readability in headset displays, with gentle contrasts to reduce eye strain during marathon knitting sessions.</p>
 
   <div class="center">
     <div class="button-mockup">+1</div><br>
-    <div style="font-size:3em; color:#cc3366;">12</div>
-    <p>A mock‑up showing the big count button and current count display.</p>
+    <div style="font-size:3em; color:#cc3366;">42</div>
+    <p>This mock-up shows how tapping increments rows and displays the current count.</p>
   </div>
 
   <h2>📂 About the Project</h2>
-  <p>This is an <strong>open‑source project</strong> hosted at  
-    <a href="https://github.com/nparashuram/knitting_counter/" target="_blank">github.com/nparashuram/knitting_counter</a>.  
-    Inside the repo you’ll find:</p>
+  <p>This is an <strong>open-source Android project</strong> hosted at  
+    <a href="https://github.com/nparashuram/knitting_counter/" target="_blank">github.com/nparashuram/knitting_counter</a>. The <strong>main branch</strong> includes:</p>
+  <ul>
+    <li>📱 An Android app coded in Kotlin, specifically built for VR-capable devices like the Meta Quest.</li>
+    <li>🧩 A clean architecture: `MainActivity.kt`, XML layout with large tap areas, and a ViewModel for row count persistence.</li>
+    <li>💾 Automatic saving to shared preferences—count survives across app restarts or device sleep.</li>
+    <li>🔧 Simple setup: clone, build via Android Studio or command-line, and install on your VR device.</li>
+  </ul>
+  <p>Contributions are welcome! Fork it to tweak styling, add dark mode, improve accessibility, or introduce custom controller support.</p>
 
-  <p>Enjoy tracking your knitting rows in VR—happy creating, happy knitting! 🎉</p>
+  <p class="center">🧶 Knit on—count in VR—with code you can tailor and expand!</p>
 </body>
 </html>
